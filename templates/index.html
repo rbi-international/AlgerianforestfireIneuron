@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Fire or Not</h1>
+
+    <div class="form">
+        <form action="/predict_class" method="POST">
+            <input type="number" name="day" id="day" placeholder="Day">
+            <input type="number" name="month" id="month" placeholder="Month">
+            <input type="number" name="Temperature" id="Temperature" placeholder="Temperature">
+            <input type="number" name="RH" id="RH" placeholder="RH">
+            <input type="number" name="Ws" id="Ws" placeholder="Ws">
+            <input type="number" name="Rain" id="Rain"placeholder="Rain">
+             <input type="number" name="FFMC" id="FFMC"placeholder="FFMC">
+             <input type="number" name="DMC" id="DMC"placeholder="DMC">
+             <input type="number" name="FWI" id="FWI"placeholder="FWI">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
