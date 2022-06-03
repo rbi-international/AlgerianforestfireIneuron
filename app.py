@@ -75,7 +75,7 @@ def index():
             DMC = float(request.form['DMC'])
             FWI = float(request.form['FWI'])
 
-            filename = 'finalized_model_decision_tree.pkl.'
+            filename = 'finalized_model_decision_tree.pkl'
             loaded_model = pickle.load(open(filename, 'rb')) # loading the model file from the storage
             # predictions using the loaded model file
             prediction = loaded_model.predict([[day, month, Temperature, RH, Ws, Rain, FFMC, DMC, FWI]])
