@@ -2,14 +2,10 @@
 dnspython
 Flask-Cors
 fonttools
-mkl-fft
-mkl-service
-munkres
+
 Pillow
 pymongo
 pytz
-sip
-wincertstore
 gunicorn
 Jinja2
 Werkzeug
