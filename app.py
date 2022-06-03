@@ -54,7 +54,7 @@ def predict():
 ## Classification module
 
 
-@app.route('/classification',methods=['GET'])  # route to display the home page
+@app.route('/classification',methods=['GET', 'POST'])  # route to display the home page
 @cross_origin()
 def homePage():
     return render_template("index.html")
